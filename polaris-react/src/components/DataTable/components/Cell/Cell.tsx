@@ -27,6 +27,7 @@ export interface CellProps {
   stickyHeadingCell?: boolean;
   stickyCellWidth?: number;
   key?: string;
+  hovered?: boolean;
 }
 
 export function Cell({
@@ -48,6 +49,7 @@ export function Cell({
   stickyHeadingCell = false,
   stickyCellWidth,
   key,
+  hovered = false,
 }: CellProps) {
   const i18n = useI18n();
   const numeric = contentType === 'numeric';
@@ -63,6 +65,7 @@ export function Cell({
     sortable && styles['Cell-sortable'],
     sorted && styles['Cell-sorted'],
     stickyHeadingCell && styles.StickyHeaderCell,
+    hovered && styles['Cell-hovered'],
   );
 
   const headerClassName = classNames(
