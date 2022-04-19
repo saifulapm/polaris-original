@@ -19,6 +19,10 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 - Added `disable` prop to the action groups title of the Page header ([#5702](https://github.com/Shopify/polaris/pull/5702))
 - Added `onClick` prop to the action groups title of the Page header ([#5751](https://github.com/Shopify/polaris/pull/5751))
 - Added `extraSmall` to the available sizes of the `Thumbnail` and `SkeletonThumbnail` ([#5770](https://github.com/Shopify/polaris/pull/5770))
+- Added support for setting a `ReactNode` on the `PageActions` `secondaryActions` prop ([#5495](https://github.com/Shopify/polaris/pull/5495))
+
+- Added support for NodeJS v14 ([#5551](https://github.com/Shopify/polaris/pull/5551))
+- Added an optional `fixedFirstColumn` prop to the `DataTable` ([#5539](https://github.com/Shopify/polaris/pull/5539))
 
 ### Bug fixes
 
