@@ -15,10 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.0.0
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: yarn
+          cache: pnpm
 
       - uses: actions/cache@v2
         name: Restore internal build cache
@@ -31,9 +34,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node${{ matrix.node-version }}-accessibility-test-v1-
 
-      - run: yarn --frozen-lockfile
-      - run: yarn build
-      - run: yarn workspace @shopify/polaris run storybook:build --quiet
+      - run: pnpm --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm --filter "@shopify/polaris" run storybook:build --quiet
       - run: node ./polaris-react/scripts/accessibility-check.js
         env:
           STORYBOOK_DISABLE_DOCS: 1
@@ -48,7 +51,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: yarn
+          cache: pnpm
 
       - uses: actions/cache@v2
         name: Restore internal build cache
@@ -61,9 +64,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node${{ matrix.node-version }}-visual-regression-test-v1-
 
-      - run: yarn --frozen-lockfile
-      - run: yarn build
-      - run: yarn workspace @shopify/polaris run storybook:build --quiet
+      - run: pnpm
+      - run: pnpm build
+      - run: pnpm --filter "@shopify/polaris" storybook:build --quiet
 
       - uses: chromaui/action@v1
         with:

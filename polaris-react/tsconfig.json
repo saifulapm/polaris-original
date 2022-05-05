@@ -10,6 +10,7 @@
     "isolatedModules": true,
     "importsNotUsedAsValues": "error",
     "strictFunctionTypes": false,
+    "types": ["node", "jest"],
     "paths": {
       "tests/*": ["./tests/*"]
     }

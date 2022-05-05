@@ -10,9 +10,9 @@ merge:
 
 dependencies:
   override:
-    - yarn install
+    - pnpm install
 
 deploy:
   override:
-    - yarn turbo run build --filter=@shopify/polaris-icons
+    - pnpm turbo run build --filter=@shopify/polaris-icons
     - npm publish polaris-tokens --tag latest

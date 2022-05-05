@@ -1,0 +1,7 @@
+packages:
+  - 'polaris-for-vscode'
+  - 'polaris-icons'
+  - 'polaris-react'
+  - 'polaris-tokens'
+  - 'polaris.shopify.com'
+  - 'stylelint-polaris'

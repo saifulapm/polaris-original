@@ -10,7 +10,7 @@ merge:
 
 dependencies:
   override:
-    - yarn install
+    - pnpm install
 
 deploy:
   override:
