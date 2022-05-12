@@ -120,6 +120,7 @@ export function Cell({
 
   const stickyHeading = (
     <div
+      key={key}
       ref={setRef}
       {...headerCell.props}
       {...colSpanProp}
@@ -129,7 +130,6 @@ export function Cell({
         width: stickyCellWidth,
       }}
       data-index-table-sticky-heading
-      key={key}
     >
       {columnHeadingContent}
     </div>
