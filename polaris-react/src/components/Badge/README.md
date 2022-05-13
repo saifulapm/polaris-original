@@ -260,7 +260,9 @@ Use to indicate when a given task has been partially completed. For example, whe
 Use to indicate when a given task has been completed. For example, when merchants have fulfilled an order.
 
 ```jsx
-<Badge progress="complete">Fulfilled</Badge>
+<Badge progress="complete" status="new">
+  Fulfilled
+</Badge>
 ```
 
 ### Badge with statusAndProgressLabelOverride
