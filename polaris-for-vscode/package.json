@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/Shopify/polaris/issues"
   },
-  "version": "0.1.1",
+  "version": "0.2.0",
   "keywords": [
     "polaris",
     "shopify"
@@ -33,7 +33,7 @@
     "build": "tsc -b",
     "dev": "tsc -b -w",
     "lint": "TIMING=1 eslint --cache .",
-    "clean": "rm -rf .turbo node_modules dist"
+    "clean": "rm -rf .turbo node_modules dist *.tsbuildinfo"
   },
   "dependencies": {
     "@shopify/polaris-tokens": "*",
