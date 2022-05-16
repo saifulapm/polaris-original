@@ -14,6 +14,7 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 ### Bug fixes
 
 - Fixed vertical scroll on small screens in `EmptyState` ([#5779](https://github.com/Shopify/polaris/pull/5779))
+- Fixed a regression to scroll position in the `ListBox` ([#5812]https://github.com/Shopify/polaris/pull/5812)
 
 ### Documentation
 
