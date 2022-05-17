@@ -5,6 +5,7 @@ import {withGlobals} from '@luigiminardim/storybook-addon-globals-controls';
 import {AppProvider} from '../src';
 import enTranslations from '../locales/en.json';
 import {GridOverlay} from './GridOverlay';
+import {RenderPerformanceProfiler} from './RenderPerformanceProfiler';
 
 function StrictModeDecorator(Story, context) {
   const {strictMode} = context.globals;
@@ -39,6 +40,14 @@ function GridOverlayDecorator(Story, context) {
       {gridOverlay}
       <Story />
     </>
+  );
+}
+
+function RenderPerformanceProfilerDecorator(Story, context) {
+  return (
+    <RenderPerformanceProfiler id={context.id} kind={context.kind}>
+      <Story {...context} />
+    </RenderPerformanceProfiler>
   );
 }
 
@@ -85,6 +94,7 @@ export const globalTypes = {
 export const decorators = [
   StrictModeDecorator,
   AppProviderDecorator,
-  withPerformance,
+  // withPerformance,
   GridOverlayDecorator,
+  RenderPerformanceProfilerDecorator,
 ];
