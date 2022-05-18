@@ -84,6 +84,8 @@ export interface DataTableProps {
   stickyHeader?: boolean;
   /** Add a fixed first column on horizontal scroll. */
   hasFixedFirstColumn?: boolean;
+  /** Specify a min width for the first column if neccessary */
+  firstColumnMinWidth?: string;
 }
 
 type CombinedProps = DataTableProps & {
@@ -566,6 +568,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
       defaultSortDirection,
       initialSortColumnIndex = 0,
       verticalAlign,
+      firstColumnMinWidth,
     } = this.props;
 
     const {
@@ -624,6 +627,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
         handleFocus={this.handleFocus}
         stickyCellWidth={stickyCellWidth}
         fixedCellVisible={!isScrolledFarthestLeft}
+        firstColumnMinWidth={firstColumnMinWidth}
       />
     );
   };
