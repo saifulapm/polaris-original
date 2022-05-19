@@ -17,6 +17,7 @@ import {Spinner} from '../Spinner';
 import {Popover} from '../Popover';
 import {ActionList} from '../ActionList';
 import {UnstyledButton, UnstyledButtonProps} from '../UnstyledButton';
+import {usePerformanceBenchmark} from '../../utilities/use-performance-benchmark';
 
 import styles from './Button.scss';
 
@@ -124,6 +125,7 @@ export function Button({
   fullWidth,
   connectedDisclosure,
 }: ButtonProps) {
+  usePerformanceBenchmark('Button');
   const i18n = useI18n();
 
   const isDisabled = disabled || loading;
