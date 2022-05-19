@@ -176,10 +176,7 @@ export {
 export type {FrameProps} from './components/Frame';
 
 export {Grid} from './components/Grid';
-export type {
-  GridProps,
-  CellProps as GridCellProps,
-} from './components/Grid';
+export type {GridProps, CellProps as GridCellProps} from './components/Grid';
 
 export {Heading} from './components/Heading';
 export type {HeadingProps} from './components/Heading';
