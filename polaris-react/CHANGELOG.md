@@ -1,5 +1,11 @@
 # Changelog
 
+## 9.12.0
+
+### Minor Changes
+
+- [#5962](https://github.com/Shopify/polaris/pull/5962) [`3a64ee7e3`](https://github.com/Shopify/polaris/commit/3a64ee7e394e6d459ad629b8c054a63c1febc236) Thanks [@alex-page](https://github.com/alex-page)! - Updated @rollup/pluginutils to v4.1.0
+
 ## 9.11.0
 
 ### Minor Changes
